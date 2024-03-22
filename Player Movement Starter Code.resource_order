@@ -6,7 +6,7 @@
     {"name":"spr_boss","order":10,"path":"sprites/spr_boss/spr_boss.yy",},
     {"name":"spr_player_fall","order":7,"path":"sprites/spr_player_fall/spr_player_fall.yy",},
     {"name":"spr_player_jump","order":8,"path":"sprites/spr_player_jump/spr_player_jump.yy",},
-    {"name":"spr_player_fly","order":11,"path":"sprites/spr_player_fly/spr_player_fly.yy",},
+    {"name":"spr_player_glide","order":11,"path":"sprites/spr_player_glide/spr_player_glide.yy",},
     {"name":"spr_player_run","order":5,"path":"sprites/spr_player_run/spr_player_run.yy",},
     {"name":"spr_player_slide","order":9,"path":"sprites/spr_player_slide/spr_player_slide.yy",},
     {"name":"spr_player_wall","order":6,"path":"sprites/spr_player_wall/spr_player_wall.yy",},

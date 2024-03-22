@@ -6,7 +6,7 @@ key_left = keyboard_check(vk_left);
 key_right = keyboard_check(vk_right);
 key_jump = keyboard_check_pressed(vk_up);
 key_slide = keyboard_check_pressed(vk_down);
-key_glide = keyboard_check_pressed(vk_alt);
+key_glide = keyboard_check_pressed(vk_space);
 
 //Calc movoment horiz
 walljumpdelay = max(walljumpdelay-1,0);
@@ -101,6 +101,8 @@ if key_jump && (currjumps < maxjumps) {
 	slidedelay = 0;
 }
 
+
+
 //Horizontal collision
 if (place_meeting(x + hsp, y, obj_wall)) {
 	while (!place_meeting(x + sign(hsp), y, obj_wall)) {
@@ -152,6 +154,12 @@ else if (on_wall != 0 && !on_ground && (key_left != 0 || key_right != 0)) {
 		sprite_index = spr_player_run;
 	}
 }
+
+if (key_jump && key_glide){
+	grv = 1
+	sprite_index = spr_player_glide;
+}
+	
 
 if(hsp != 0) {
 	image_xscale = sign(hsp);

@@ -40,7 +40,7 @@
     {"id":{"name":"spr_boss","path":"sprites/spr_boss/spr_boss.yy",},},
     {"id":{"name":"spr_player_fall","path":"sprites/spr_player_fall/spr_player_fall.yy",},},
     {"id":{"name":"spr_player_jump","path":"sprites/spr_player_jump/spr_player_jump.yy",},},
-    {"id":{"name":"spr_player_fly","path":"sprites/spr_player_fly/spr_player_fly.yy",},},
+    {"id":{"name":"spr_player_glide","path":"sprites/spr_player_glide/spr_player_glide.yy",},},
     {"id":{"name":"spr_player_run","path":"sprites/spr_player_run/spr_player_run.yy",},},
     {"id":{"name":"spr_player_slide","path":"sprites/spr_player_slide/spr_player_slide.yy",},},
     {"id":{"name":"spr_player_wall","path":"sprites/spr_player_wall/spr_player_wall.yy",},},
