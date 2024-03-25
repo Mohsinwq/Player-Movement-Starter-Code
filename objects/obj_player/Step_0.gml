@@ -156,8 +156,7 @@ else if (on_wall != 0 && !on_ground && (key_left != 0 || key_right != 0)) {
 }
 
 if (key_jump && key_glide){
-	grv = 1
-	sprite_index = spr_player_glide;
+	
 }
 	
 
