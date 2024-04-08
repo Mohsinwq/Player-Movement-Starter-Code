@@ -6,7 +6,6 @@ key_left = keyboard_check(vk_left);
 key_right = keyboard_check(vk_right);
 key_jump = keyboard_check_pressed(vk_up);
 key_slide = keyboard_check_pressed(vk_down);
-key_glide = keyboard_check_pressed(vk_space);
 
 //Calc movoment horiz
 walljumpdelay = max(walljumpdelay-1,0);
@@ -51,6 +50,7 @@ if(_move == 0 && slidedelay == 0) { //normal friction with ground and air
 	if (hsp_fric_final >= abs(hsp)) {
 		hsp = 0;
 	}
+	
 } else if (slidedelay > 0) { //slide friction set
 	var hsp_fric_final = hsp_fric_slide;
 	if (hsp < 0) {
@@ -155,10 +155,6 @@ else if (on_wall != 0 && !on_ground && (key_left != 0 || key_right != 0)) {
 	}
 }
 
-if (key_jump && key_glide){
-	
-}
-	
 
 if(hsp != 0) {
 	image_xscale = sign(hsp);
