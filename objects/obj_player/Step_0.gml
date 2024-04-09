@@ -2,10 +2,17 @@
 
 //Get player inputs
 
-key_left = keyboard_check(vk_left);
-key_right = keyboard_check(vk_right);
-key_jump = keyboard_check_pressed(vk_up);
-key_slide = keyboard_check_pressed(vk_down);
+key_left = keyboard_check(ord("A"));
+key_right = keyboard_check(ord("D"));
+key_jump = keyboard_check_pressed(ord("W"));
+key_slide = keyboard_check_pressed(ord("S"));
+
+if (mouse_check_button_pressed(mb_left)){
+	var inst = instance_create_layer(x,y, "Instances", obj_bullet);
+	inst.direction = image_angle;
+}
+
+
 
 //Calc movoment horiz
 walljumpdelay = max(walljumpdelay-1,0);
@@ -73,22 +80,22 @@ if (on_ground && !on_wall && key_slide && slideresetdelay == 0) {
 }
 
 //stops upward wall momentum
-if ((key_left != 0 || key_right != 0) && on_wall != 0 && !on_ground && vsp < 0) {
-	vsp = 0;
-}
+//if ((key_left != 0 || key_right != 0) && on_wall != 0 && !on_ground && vsp < 0) {
+//	vsp = 0;
+//}
 
 //wall jump
-if (on_wall != 0) && (!on_ground) && (key_jump) && (key_left != 0 || key_right != 0) {
-	walljumpdelay = walljumpdelay_max;
-	hsp = -on_wall * hsp_wjump;
-	vsp = vsp_wjump;
-}
+//if (on_wall != 0) && (!on_ground) && (key_jump) && (key_left != 0 || key_right != 0) {
+//	walljumpdelay = walljumpdelay_max;
+//	hsp = -on_wall * hsp_wjump;
+//	vsp = vsp_wjump;
+//}
 
 //Calc movoment vertical
 var grv_final = grv;
-if (on_wall != 0) && (vsp > 0) && (key_left != 0 || key_right != 0) {
-	grv_final = grv_wall;
-}
+//if (on_wall != 0) && (vsp > 0) && (key_left != 0 || key_right != 0) {
+//	grv_final = grv_wall;
+//}
 vsp += grv_final;
 
 if (on_ground) {
