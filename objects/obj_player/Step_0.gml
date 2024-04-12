@@ -168,3 +168,15 @@ if(hsp != 0) {
 }
 
 //debug area
+
+obj_gun.x=x+sprite_width/2;
+obj_gun.y=y+sprite_width/2;
+
+
+if(global.PHEALTH == 0){
+	instance_destroy();
+	switch(room){
+		case rm_level1:
+			room_goto(rm_lose);
+	}
+}
