@@ -4,7 +4,7 @@ switch(room){
 		draw_set_halign(fa_center);
 		var c = c_red;
 		draw_text_transformed_color(
-			room_width/2, 100, "BOSS GAME",
+			room_width/2, 100, "New GAME",
 			3, 3, 0, c,c,c,c, 1
 		);
 		draw_text(
